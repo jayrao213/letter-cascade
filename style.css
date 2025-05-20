@@ -1,0 +1,163 @@
+:root {
+  --font-main: 'Space Grotesk', sans-serif;
+  --bg-color: #f7f5ff;
+  --text-color: #1b103f;
+  --primary: #7f5af0;
+  --primary-hover: #6a47e5;
+  --tile-bg: #d8c9ff;
+  --tile-border: #b29aff;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+#start-screen,
+#game-screen {
+  padding: 2rem 1rem;
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 24rem;
+  margin: 2rem auto;
+  background: #fff;
+  border: 2px solid var(--tile-border);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.letter {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: var(--tile-bg);
+  color: var(--text-color);
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--tile-border);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  animation: fall 4s linear forwards;
+  transition: transform 0.2s ease;
+}
+
+.letter:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fall {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+#word-buffer {
+  font-size: 1.5rem;
+  font-weight: 500;
+  min-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#submit-word,
+#start-btn,
+#delete-btn,
+#restart-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+#submit-word:hover,
+#start-btn:hover, 
+#delete-btn:hover,
+#restart-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+#score {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-row button {
+  flex-shrink: 0;
+}
+
+.letter.red {
+  background-color: #ffd5d5;
+  border-color: #ffbaba;
+}
+
+.letter.green {
+  background-color: #d5ffdf;
+  border-color: #baffc9;
+}
+
+.letter.blue {
+  background-color: #d5e8ff;
+  border-color: #add8ff;
+}
+
+.letter.yellow {
+  background-color: #fff9d5;
+  border-color: #fff3aa;
+}
+
+.letter.orange {
+  background-color: #ffe6d5;
+  border-color: #ffcaa6;
+}
+
+#timer {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1b103f;
+}
+
+#end-screen {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+#final-score {
+  font-size: 1.25rem;
+  margin: 1rem 0 2rem;
+}

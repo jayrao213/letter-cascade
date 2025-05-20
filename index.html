@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter Cascade</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="start-screen">
+    <h1>Letter Cascade</h1>
+    <p>Catch letters and build real words!</p>
+    <button id="start-btn">Start Game</button>
+  </div>
+
+  <div id="game-screen" class="hidden">
+    <div id="timer">Time: 60s</div>
+    <h1>Letter Cascade</h1>
+    <div id="game-area"></div>
+    <div id="word-buffer"></div>
+    <div class="button-row">
+      <button id="submit-word">Submit Word</button>
+      <button id="delete-btn">Delete</button>
+    </div>
+    <div id="score">Score: 0</div>
+  </div>
+
+  <div id="end-screen" class="hidden">
+    <h1>Time’s up!</h1>
+    <p id="final-score"></p>
+    <button id="restart-btn">Play Again</button>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
