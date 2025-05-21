@@ -161,3 +161,66 @@ h1 {
   font-size: 1.25rem;
   margin: 1rem 0 2rem;
 }
+
+@media (max-width: 600px) {
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  #start-screen,
+  #game-screen,
+  #end-screen {
+    height: 100vh;
+    padding: 1rem 0.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p,
+  #timer,
+  #score,
+  #final-score {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+  }
+
+  #game-area {
+    height: 20rem;
+    max-width: 90%;
+    margin: 0.5rem auto;
+  }
+
+  #word-buffer {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .button-row {
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  #submit-word,
+  #start-btn,
+  #delete-btn,
+  #restart-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hidden {
+  display: none !important;
+  }
+}
