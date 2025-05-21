@@ -92,6 +92,7 @@ function getRandomLetter() {
 }
 
 function submitWord() {
+  console.log("Submitting word:", currentWord); 
   const word = currentWord;
   const normalized = word.toLowerCase();
   if (wordSet.has(normalized)) {
@@ -111,6 +112,7 @@ function deleteLastLetter() {
 
 document.addEventListener('keydown', (e) => {
   const key = e.key;
+
   if (key.length === 1 && /^[a-zA-Z]$/.test(key)) {
     const upper = key.toUpperCase();
     const match = [...document.getElementsByClassName('letter')].find(el => el.textContent === upper);
@@ -120,8 +122,10 @@ document.addEventListener('keydown', (e) => {
       match.remove();
     }
   } else if (key === 'Backspace') {
+    e.preventDefault(); 
     deleteLastLetter();
   } else if (key === 'Enter') {
+    e.preventDefault(); 
     submitWord();
   }
 });
